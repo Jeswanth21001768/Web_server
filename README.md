@@ -20,12 +20,16 @@ Serving the HTML pages.
 
 Testing the webserver
 ## PROGRAM:
+<<<<<<< HEAD
 ```
+=======
+>>>>>>> b1a5ae61183f7ecd740696a33784bdad73bc9e76
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 <title>Saveetha Engineering College</title>
 <link rel = "icon" href = 
 "https://media.discordapp.net/attachments/533340656987275284/906080541344956436/kissclipart-saveetha-university-chennai-logo-clipart-saveetha-3a90c06681798db2.png" 
@@ -111,6 +115,17 @@ content = """
 
 </html>
 """
+=======
+<title>My webserver</title>
+</head>
+<body>
+<h1>Lakshmi priya.P</h1>
+<h2>21001411</h2>
+<h3>plakshmipriya82@gmail.com</h3>
+</body>
+</html>
+
+>>>>>>> b1a5ae61183f7ecd740696a33784bdad73bc9e76
 class myhandler(BaseHTTPRequestHandler):
     def do_GET(self):
         print("request received")
@@ -118,6 +133,7 @@ class myhandler(BaseHTTPRequestHandler):
         self.send_header('content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
+<<<<<<< HEAD
 server_address = ('',2004)
 httpd = HTTPServer(server_address,myhandler)
 print("Website is running...")
@@ -128,3 +144,14 @@ httpd.serve_forever()
 
 ## RESULT:
 A WebServer Has Been Created Successfully!
+=======
+server_address = ('',2020)
+httpd = HTTPServer(server_address,myhandler)
+print("my webserver is running...")
+httpd.serve_forever()
+
+## OUTPUT:
+![GitHub Logo](unknown.jpg)
+## RESULT:
+Web server was created successfully
+>>>>>>> b1a5ae61183f7ecd740696a33784bdad73bc9e76

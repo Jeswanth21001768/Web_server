@@ -3,6 +3,7 @@ content = """
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 <title>Saveetha Engineering College</title>
 <link rel = "icon" href = 
 "https://media.discordapp.net/attachments/533340656987275284/906080541344956436/kissclipart-saveetha-university-chennai-logo-clipart-saveetha-3a90c06681798db2.png" 
@@ -86,6 +87,15 @@ content = """
   </style>
   <script>
 
+=======
+<title>My webserver</title>
+</head>
+<body>
+<h1>Lakshmi priya.P</h1>
+<h2>21001411</h2>
+<h3>plakshmipriya82@gmail.com</h3>
+</body>
+>>>>>>> b1a5ae61183f7ecd740696a33784bdad73bc9e76
 </html>
 """
 class myhandler(BaseHTTPRequestHandler):
@@ -95,7 +105,13 @@ class myhandler(BaseHTTPRequestHandler):
         self.send_header('content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
+<<<<<<< HEAD
 server_address = ('',2004)
 httpd = HTTPServer(server_address,myhandler)
 print("Website is running...")
+=======
+server_address = ('',2020)
+httpd = HTTPServer(server_address,myhandler)
+print("my webserver is running...")
+>>>>>>> b1a5ae61183f7ecd740696a33784bdad73bc9e76
 httpd.serve_forever()
