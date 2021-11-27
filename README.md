@@ -20,16 +20,34 @@ Serving the HTML pages.
 
 Testing the webserver
 ## PROGRAM:
-<<<<<<< HEAD
+# Developing a Simple Webserver
+## AIM:
+
+To develop a simple webserver to serve html pages.
+## DESIGN STEPS:
+### Step 1:
+
+HTML content creation
+### Step 2:
+
+
+Design of webserver workflow
+### Step 3:
+
+Implementation using Python code
+### Step 4:
+
+Serving the HTML pages.
+### Step 5:
+
+Testing the webserver
+## PROGRAM:
 ```
-=======
->>>>>>> b1a5ae61183f7ecd740696a33784bdad73bc9e76
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
 <title>Saveetha Engineering College</title>
 <link rel = "icon" href = 
 "https://media.discordapp.net/attachments/533340656987275284/906080541344956436/kissclipart-saveetha-university-chennai-logo-clipart-saveetha-3a90c06681798db2.png" 
@@ -39,15 +57,15 @@ content = """
 
 <br><center><img src="https://media.discordapp.net/attachments/533340656987275284/906080541344956436/kissclipart-saveetha-university-chennai-logo-clipart-saveetha-3a90c06681798db2.png" alt="Saveetha Engineering College" style="width:100px;height:100px;"><h1>SAVEETHA ENGINEERING COLLEGE</center></h1></br>
 <br><h2>Student Detail</h2></br>
-<h3>Name: Lakshmi priya</h1>
-<h3>Reference Number: 21001411</h3>
-<h3>Contact(Gmail): plakshmipriya82@gmail.com</h3>
+<h3>Name: lakshmipriya</h1>
+<h2>21001411</h2>
+<h3>plakshmipriya82@gmail.com</h3>
 <center><br><br><div class="footer">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
               <div class="copyright-text">
-               
+                
               </div>
             </div>
           </div>
@@ -115,17 +133,6 @@ content = """
 
 </html>
 """
-=======
-<title>My webserver</title>
-</head>
-<body>
-<h1>Lakshmi priya.P</h1>
-<h2>21001411</h2>
-<h3>plakshmipriya82@gmail.com</h3>
-</body>
-</html>
-
->>>>>>> b1a5ae61183f7ecd740696a33784bdad73bc9e76
 class myhandler(BaseHTTPRequestHandler):
     def do_GET(self):
         print("request received")
@@ -133,25 +140,14 @@ class myhandler(BaseHTTPRequestHandler):
         self.send_header('content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
-<<<<<<< HEAD
 server_address = ('',2004)
 httpd = HTTPServer(server_address,myhandler)
 print("Website is running...")
 httpd.serve_forever()
+
 ```
 ## OUTPUT:
 ![GitHub Logo](unknown.jpg)
 
 ## RESULT:
 A WebServer Has Been Created Successfully!
-=======
-server_address = ('',2020)
-httpd = HTTPServer(server_address,myhandler)
-print("my webserver is running...")
-httpd.serve_forever()
-
-## OUTPUT:
-![GitHub Logo](unknown.jpg)
-## RESULT:
-Web server was created successfully
->>>>>>> b1a5ae61183f7ecd740696a33784bdad73bc9e76
